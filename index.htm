@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checked ID</title>
+        <script type="module" src="demo.js"></script>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14pt;
+            }
+
+            #demo {
+                text-align: center;
+            }
+
+            #id-controls {
+                display: flex;
+                justify-content: center;
+            }
+
+            #id-input {
+                display: flex;
+                justify-content: center;
+                font-family: monospace;
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            #id-input input {
+                font-family: monospace;
+                font-size: 2rem;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+                width: 1.5rem;
+                border: 1px solid black;
+            }
+
+            #id-input .error {
+                background-color: rgb(255, 128, 114);
+            }
+
+            #id-input .check {
+                background-color: rgb(223, 225, 255);
+            }
+
+            #id-output {
+                margin-top: 1rem;
+                text-align: center;
+            }
+
+            button {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 12pt;
+                border: none;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                margin: 0.2rem;
+                cursor: pointer;
+                background-color: rgb(223, 225, 255);
+            }
+
+            button:hover {
+                background-color: rgb(195, 198, 242);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="demo">
+            <div>
+                <p>
+                    Demo illustrating embedded checksums (light blue) in an identifier to verify correctness.
+                </p>
+                <p>
+                    Red indicates possibly incorrect characters that should be checked for correctness.
+                </p>
+            </div>
+            <div id="id-controls">
+                <button id="btn-size-8">Size 8</button>
+                <button id="btn-size-12">Size 12</button>
+                <button id="btn-size-16">Size 16</button>
+                <button id="btn-size-20">Size 20</button>
+                <button id="btn-size-24">Size 24</button>
+                <button id="btn-size-28">Size 28</button>
+                <button id="btn-size-32">Size 32</button>
+                <button id="btn-randomize">Randomize</button>
+            </div>
+            <div id="id-input"></div>
+            <div id="id-output"></div>
+        </div>
+    </body>
+</html>
